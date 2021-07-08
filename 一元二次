@@ -1,0 +1,8 @@
+Public Sub 一元二次()
+
+a = InputBox("請輸入a值")
+b = InputBox("請輸入b值")
+c = InputBox("請輸入c值")
+W = (Val(b) ^ 2) - 4 * Val(a) * Val(c)
+MsgBox W
+End Sub
