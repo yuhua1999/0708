@@ -1,0 +1,27 @@
+Public Sub exercise()
+Dim kind As Integer  '用戶分類
+    Dim degree As Integer '度數
+    Dim price As Single   '每度電費
+ kind = Range("A2").Value
+degree = Range("B2").Value
+If kind = 1 Then
+     Select Case degree
+        Case Is <= 110
+           price = 2.1
+        Case 111 To 330
+           price = 2.415
+        Case Is > 330
+           price = 2.73
+End Select
+     Range("C2").Value = Format(degree * price, "0") 'format "0" = 四捨五入到整數
+ ElseIf kind = 2 Then
+     Range("C2").Value = Format(degree * 2.73, "0")
+ ElseIf kind = 3 Then
+     Range("C2").Value = Format(degree * 2.1, "0")
+ Else
+  Range("A2").Value = " 錯誤 ! "
+  Range("C2").Value = ""
+ End If
+
+     
+End Sub
