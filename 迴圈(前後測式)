@@ -1,0 +1,30 @@
+Public Sub 前測式迴圈()
+sum = 0
+i = 1
+While (i <= 10)
+  sum = sum + i
+  i = i = 1
+  Wend
+  MsgBox "1+2+3+...+10=" & sum
+End Sub
+
+Public Sub 後測式迴圈()
+counter = 0
+myValue = 5
+Do
+  MsgBox "執行第" & connter & "次作業..."
+  myValue = myValue - 1
+  counter = counter + 1
+  Loop While myValue >= 0
+  MsgBox "執行" & counter & "次作業。" 
+End Sub
+
+Public Sub 迴圈()
+Dim pw As String
+Do
+pw = InputBox("請輸入密碼...", "密碼", "")
+Loop Until (pw = "1234")
+MsgBox "歡迎光臨本系統", vbOKOnly + 48, "Welcome"
+
+
+End Sub
