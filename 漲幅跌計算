@@ -1,0 +1,11 @@
+Public Sub caculate()
+Cells(1, 5).Value = "用VBA計算漲跌幅"
+Cells(2, 5).Value = 0
+For i = 3 To 21
+Cells(i, 5).Value = Round((Cells(i, 3).Value - Cells(i - 1, 3).Value) / Cells(i - 1, 3).Value, 7)
+Next
+
+Range("E1:E21").Font.Name = "標楷體"
+Range("E1:E21").Font.Size = 14
+Range("E1:E21").Font.Color = RGB(0, 0, 255)
+End Sub
