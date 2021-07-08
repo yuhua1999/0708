@@ -1,0 +1,18 @@
+Public Sub BMI()
+
+x = InputBox("請輸入你的體重(kg):")
+y = InputBox("請輸入你的身高(cm):")
+W = x
+H = y / 100
+P = W / (H * H)
+If P < 18 Then
+MsgBox ("過輕")
+ElseIf 24 > P >= 18 Then
+MsgBox ("正常")
+ElseIf 27 > P >= 24 Then
+MsgBox ("過重")
+Else
+MsgBox ("肥胖")
+
+End If
+End Sub
